@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block teamname %}All Teams{% endblock teamname %}
+
+{% block itemteams %}
+
+<div style="text-align: center; margin: 15px; font-size: xx-large;">
+    All Teams
+</div>
+
+{% for team in teams %}
+
+<div class="cardmod card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{team.teamID}}</h5>
+        <p class="card-text">{{team.teamName}}</p>
+        <a href="/{{team.teamID}}" class="btn btn-primary">Visit Team</a>
+    </div>
+</div>
+
+
+
+{% endfor %}
+
+
+
+
+{% endblock itemteams %}

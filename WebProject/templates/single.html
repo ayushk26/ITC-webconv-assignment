@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block teamname %}{{team.teamName}}{% endblock teamname %}
+
+{% block selectedteam %}
+
+<style>
+    .teamdata{
+        margin: 10px;
+        margin: 5px;
+    
+    }
+    .id{
+        display:inline-flex;
+        margin: 5px;
+        font-size: xx-large;
+        font-style: italic;
+    }
+    .name{
+        margin-left: 15%;
+        display: inline-flex;
+        font-size: 50px;
+    }
+
+    .memberslist{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 30px;
+        border-color: #e65858;
+        border-style: solid;
+        border-radius: 20px;
+        width: fit-content;
+        padding: 20px;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .memberslist li{
+        display: inline-flex;
+        font-style: oblique;
+        margin: 10px;
+    }
+
+</style>
+
+
+<div class="teamdata">
+    <div class="id">
+        TeamID : &nbsp; <strong> {{team.teamID}}</strong> 
+    </div>
+    <div class="name">
+        TeamName: &nbsp; <strong>{{team.teamName}}</strong>
+    </div>
+    <div class="memberslist">
+        <div style="color: darkred;">Members</div>
+        <ul>
+            {% for member in members %}
+            <li>{{member}}</li>
+            {% endfor %}
+        </ul>
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock selectedteam %}
