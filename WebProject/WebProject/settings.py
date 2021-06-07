@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'ITSP',
     'api',
     'rest_framework',
-    'requests'
+    'requests',
+    'django_mysql'
 ]
 
 MIDDLEWARE = [
