@@ -3,10 +3,17 @@ from django.http import JsonResponse
 from rest_framework import viewsets
 from ITSP.models import Team
 from .serializers import TeamSerializer
-from .apiformat import api
+
 
 
 def apireturn(request):
+    api = {"data":
+               [{"teamID": team.teamID,
+                 "teamName": team.teamName,
+                 "members": team.members}
+                for team in Team.objects.all()]
+           }
+
     return JsonResponse(api)
 
 

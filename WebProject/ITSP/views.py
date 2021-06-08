@@ -1,7 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .models import Team
 import requests
-from .string_to_list import Convert
 import json
 
 def index(request):
