@@ -22,5 +22,6 @@ router = routers.DefaultRouter()
 router.register(r'team', views.TeamView)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('json/',views.apireturn,name='api')
 ]
