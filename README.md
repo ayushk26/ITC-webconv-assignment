@@ -23,6 +23,9 @@ In directory containing manage.py file, run in shell
 python manage.py runserver
 ```
 
+## API URL
+/api/json  -- also given in the on the homepage of the project
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
